@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'AppleFont';
+  src: url(regular.woff2)
+}
+
+@font-face {
+  font-family: 'AppleFontLight';
+  src: url(light.woff2)
+}
+
+body {
+  margin: 0;
+  font-family: 'AppleFontLight'
+}
+
+.app {
+  width: 100vw;
+  display: flex;
+  margin-top: calc(44px - 1em);
+
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 44px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  display : flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content:center;
+}
+
+.header-nv-content{
+ font-style: 'AppleFontLight';
+ width: calc(100% - 30px);
+ height: 100%;
+ padding:0 15px;
+ max-width:1000px;
+ display:flex;
+ flex-flow:  row nowrap;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.header-content:hover{
+color:rgb(0,0,0,0.5)
+}
+
+.advert-lg{
+  width: 100%;
+  min-height:35em;
+  max-height: calc(100vh - 3em - 10vh);
+  background-color: rgb(250,250,250);
+  margin-top:1em;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-flow: column nowrap;
+  justify-content:  flex-start;
+  align-items:  center;
+}
+
+
+.advert-lg-title{
+  font-family: "AppleFont";
+  letter-spacing: 0.008em;
+  margin: 0;
+  margin-top: 0.5em;
+  padding-top:10px;
+  font-size: 3.5em;
+}
+
+.adver-lg-subtitle{
+  font-family: "AppleFont";
+  margin: 0;
+  margin-top: 6px;
+  font-size: 1.5em;
+}
+
+.adver-lg-disclaimer{
+  margin: 0;
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: 900;
+  color: rgb(110,110,110);
+}
+.adver-lg-link-container{
+  font-family: "AppleFont";
+  margin-top: 17px;
+  font-size: 1.3em;
+  color: rgb(100,150,220);
+}
+
+.adver-lg-link {
+  margin-right: 5px;
+}
+
+.adver-lg-link:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.advert-md-container{
+  width: 100vw;
+  padding-bottom: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.advert-md{
+  width: calc(50% - 1.5em);
+  min-height:25em;
+  height: 70vh;
+  background-color: rgb(250,250,250);
+  margin-top:1em;
+  display: flex;
+  font-size: 0.9em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-flow: column nowrap;
+  justify-content:  flex-start;
+  align-items:  center;
+}
+
+@media only screen and (max-width: 1200px){
+
+  header{
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .app {
+    font-size: 14px;
+  }
+  .advert-md-container {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .advert-md {
+    width: 100%;
+  }
+}
+
+
+
+@media only screen and (max-width: 600px){
+  .app {
+    font-size: 12px;
+  }
+  .header-content{
+    display:none;
+  }
+}
+
+
+@media only screen and (max-width: 400px){
+  .app {
+    font-size: 10px;
+  }
+
+}
